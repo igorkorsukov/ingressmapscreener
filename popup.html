@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Getting Started Extension's Popup</title>
+    
+    <link href="bootstrap.min.css" rel="stylesheet"> 
+    
+    <style>
+      body {
+        min-width: 357px;
+        overflow-x: hidden;
+      }
+      
+      .top5 { margin-top: 5px; }
+      .top7 { margin-top: 7px; }
+      .top10 { margin-top: 10px; }
+      .bottom5 { margin-bottom: 5px; }
+      .bottom7 { margin-bottom: 7px; }
+      .bottom10 { margin-bottom: 10px; }
+      .left5 { margin-left: 5px; }
+      .left7 { margin-left: 7px; }
+      .left10 { margin-left: 10px; }
+      .right5 { margin-right: 5px; }
+      .right7 { margin-right: 7px; }
+      .right10 { margin-right: 10px; }
+
+    </style>
+
+    
+    <!--
+    - JavaScript and HTML must be in separate files: see our Content Security
+    - Policy documentation[1] for details and explanation.
+    -
+    - [1]: http://developer.chrome.com/extensions/contentSecurityPolicy.html
+    -->
+    <script src="popup.js"></script>
+</head>
+    
+<body>
+<div class="container">
+
+    <div class="panel panel-default top10">
+    <div class="panel-heading">Размер</div>
+    <div class="panel-body">
+        <div class="row center-block"> 
+            <label class="col-xs-3 control-label top5">Высота</label> 
+            <div class="col-xs-5"> 
+            <select id="height_select" class="form-control">
+              <option value=4000>4000</option>
+              <option value=6000>6000</option>
+              <option value=8000>8000</option>
+              <option value=10000>10000</option>
+              <option value=12000>12000</option>
+              <option value=14000>14000</option>
+            </select>  
+            </div>
+            <label class="col-xs-2 top5">px</label> 
+        </div>
+        <div class="row center-block top7"> 
+            <label class="col-xs-3 control-label top5">Ширина</label> 
+            <div class="col-xs-5"> 
+            <select id="width_select" class="form-control">
+              <option value=4000>4000</option>
+              <option value=6000>6000</option>
+              <option value=8000>8000</option>
+              <option value=10000>10000</option>
+              <option value=12000>12000</option>
+              <option value=14000>14000</option>
+            </select>  
+            </div>
+            <label class="col-xs-2 top5">px</label> 
+        </div>
+        <div class="text-right top5">
+            <button id="prepare_btn" type="button" class="btn btn-primary">Применить</button>
+        </div>
+    </div>
+    </div>
+    
+    <div class="panel panel-default top10">
+    <div class="panel-heading">Скрин</div>
+    <div class="panel-body">
+    <div class="row center-block top7"> 
+        <label class="col-xs-3 control-label top5">Формат</label> 
+        <div class="col-xs-5"> 
+        <select id="format_select" class="form-control">
+          <option value="jpeg">jpeg</option>
+          <option value="png">png</option>
+        </select>        
+        </div>
+    </div>
+    <div class="row center-block top7"> 
+        <label class="col-xs-3 control-label top5">Качество</label> 
+        <div class="col-xs-4"> 
+        <select id="quality_select" class="form-control">
+          <option value=50>50</option>
+          <option value=60>60</option>
+          <option value=70>70</option>
+          <option value=80>80</option>
+          <option value=90>90</option>
+          <option value=100>100</option>
+        </select>  
+        </div>
+    </div>
+    <div class="text-right top5">
+        <button id="screen_btn" type="button" class="btn btn-primary">Скрин</button>
+    </div>
+    </div>
+</body>
+</html>
+  
